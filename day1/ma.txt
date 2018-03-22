@@ -1,0 +1,9 @@
+<html>
+	<head>
+			<title>ÎÒµÄÍøÕ¾</title>
+	</head>
+	<body text="orange" bgcolor="snow" background="fixed.jpg">
+	background
+
+	</body>
+</html>
