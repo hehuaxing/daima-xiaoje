@@ -1,0 +1,17 @@
+1、git status 查看当前状态，不是提交命令，不要当提交命令使用。
+2、git diff 查看提交具体内容，使用回车件翻看记录。
+3、git init 初始化git，当开始使用的时候需要使用他，但只能使用一次，如果你的目录有“.git”这个目录的时候，就不需要在使用git ini命令初始化。注意：初始化一遍，不要在初始化第二遍。
+
+4  git status 查看当前状态 ，为红色
+5  git add .  添加文本
+6  git status 添加成功则显示绿色
+7  git commit -m "注释"
+8  git log 检查本地是否提交成功    
+           
+上传文件库
+1   打开网站github
+2   复制 当前地址至 git命令台 回车
+3   git push add -u origin master
+4   点击文件库，查看是否提交上传成功
+
+       
