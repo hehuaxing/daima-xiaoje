@@ -17,3 +17,8 @@
 
  特别注意事项 ：如果把之前的仓库删除，在git命令台需要使用  git remote set-url
 origin 加上你所建立的仓库的地址。。。。然后执行 git push add -u origin master
+
+
+ 下载
+1  在d盘新建 右键打开控制台
+2   git clone 加下载地址
