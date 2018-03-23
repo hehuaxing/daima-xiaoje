@@ -14,4 +14,6 @@
 3   git push add -u origin master
 4   点击文件库，查看是否提交上传成功
 
-       
+
+ 特别注意事项 ：如果把之前的仓库删除，在git命令台需要使用  git remote set-url
+origin 加上你所建立的仓库的地址。。。。然后执行 git push add -u origin master
