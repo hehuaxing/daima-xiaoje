@@ -26,3 +26,7 @@ origin 加上你所建立的仓库的地址。。。。然后执行 git push add -u origin master
 
    别人上传我的账号，本地提交没有记录，并且电脑上没有文件，为了出现记录使用
 git pull则现在 本地有记录，电脑上有文件
+  
+
+上传不成功的信号语句error: failed to push some refs to 'git@github.com:hehuaxing/daima-xiaoje.git'
+  解决方法 git pull shift加 ： 加wq 回车
