@@ -15,7 +15,7 @@
 4   点击文件库，查看是否提交上传成功
 
 
- 特别注意事项 ：如果把之前的仓库删除，在git命令台需要使用  git remote set-url
+ 特别注意事项 ：如果把之前的仓库删除，在本地提交成功后git命令台需要使用  git remote set-url
 origin 加上你所建立的仓库的地址。。。。然后执行 git push add -u origin master
 
 
@@ -26,7 +26,13 @@ origin 加上你所建立的仓库的地址。。。。然后执行 git push add -u origin master
 
    别人上传我的账号，本地提交没有记录，并且电脑上没有文件，为了出现记录使用
 git pull则现在 本地有记录，电脑上有文件
-  
+本地提交成功后，如果你没有同步上传无法成功。给他
+ git pull 
+然后 shift 加：wq回车然后 
+git push -u origin master
 
-上传不成功的信号语句error: failed to push some refs to 'git@github.com:hehuaxing/daima-xiaoje.git'
-  解决方法 git pull shift加 ： 加wq 回车
+
+
+
+
+
