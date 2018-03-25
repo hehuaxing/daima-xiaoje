@@ -1,0 +1,18 @@
+
+ <html><head><title>我的练习</title></head>
+ <body background="bg3.jpg"><font size="6" color=:"green">净慈寺送林子方</font><br/>
+<font size="4">南宋 杨万里</font><br/>
+<font size="5">毕竟<font color ="red"><sup>1</sup></font>西湖六月中，</font><br/>
+<font size="5">风光不与四<font color ="red"><sup>2</sup></font>时同。</font><br/>
+<font size="5">接天<font color ="red"><sup>3</sup></font>莲叶无穷碧，</font><br/>
+<font size="5">映日<font color ="red"><sup>4</sup></font>荷花别样红。</font><br/>
+
+注释
+1.毕竟： 到底。六月中：六月中旬。
+2.四时：春夏秋冬四个季节。在这里指六月以外的其他时节。同：相同。
+3.接天：像与天空相接。无穷：无边无际。无穷碧：因莲叶面积很广，似与天相接，故呈现无穷的碧绿。
+4.映日：日红。别样：宋代俗语，特别，不一样。别样红：红得特别出色。 
+
+  
+ </body>
+</html>
