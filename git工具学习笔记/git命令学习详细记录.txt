@@ -1,28 +1,45 @@
-1��git status �鿴��ǰ״̬�������ύ�����Ҫ���ύ����ʹ�á�
-2��git diff �鿴�ύ�������ݣ�ʹ�ûس���������¼��
-3��git init ��ʼ��git������ʼʹ�õ�ʱ����Ҫʹ��������ֻ��ʹ��һ�Σ�������Ŀ¼�С�.git�����Ŀ¼��ʱ�򣬾Ͳ���Ҫ��ʹ��git ini�����ʼ����ע�⣺��ʼ��һ�飬��Ҫ�ڳ�ʼ���ڶ��顣
+﻿2018.3.19 至2018.3.25周报
+一·本周学习情况
+（一）学习内容
+       1.<html>
+               <head>title</head>
+               <body>
+               </body>
+               </html>
+               html注释
+              （1）文本的标记：属性，font，face bgcolor 6.（2）hr 单标记<hr/>
+       3. html字符实体
+              （1）空格 ，&，版权，注册商标，申请中目标
+       4.有序列表，无序列表，自定义列表
+       5.滚动字幕标记
+       6.html颜色表示计算机十进制，八进制 十六进制，二进制
+       7.计算机编码 ASC ANSI，gb2312 GBK
+       8.有关描述搜索生成一个摘要
+         <meta name ="author", context="/">
+         <meta name ="description", context="/">
+         <meta name ="keyword", context="/">
+（二） git 和github使用步骤
+       1.git status 查看当前状态，不是提交命令，不要当提交命令使用。
+       2.git diff 查看提交具体内容，使用回车件翻看记录。
+       3.git init 初始化git，当开始使用的时候需要使用他，但只能使用一次，如果你的目录有“.git”这个目录的时候，就不需要在使用git ini命令初始化。注意：初始化一遍，不要在初始化第二遍。
+       4.git status 查看当前状态 ，为红色
+       5.git add .  添加文本
+       6.git status 添加成功则显示绿色
+       7.git commit -m "注释"
+       8.git log 检查本地是否提交成功    
+（三）上传文件库
+       1.打开网站github
+       2.复制 当前地址至 git命令台 回车
+       3.git push add -u origin master
+       4.点击文件库，查看是否提交上传成功 
+  特别注意事项 ：如果把之前的仓库删除，在git命令台需要使用  git remote set-urlorigin 加上你所建立的仓库的地址。。。。然后执行 git push add -u origin master
 
-4  git status �鿴��ǰ״̬ ��Ϊ��ɫ
-5  git add .  �����ı�
-6  git status ���ӳɹ�����ʾ��ɫ
-7  git commit -m "ע��"
-8  git log ��鱾���Ƿ��ύ�ɹ�    
-           
-�ϴ��ļ���
-1   ����վgithub
-2   ���� ��ǰ��ַ�� git����̨ �س�
-3   git push add -u origin master
-4   ����ļ��⣬�鿴�Ƿ��ύ�ϴ��ɹ�
 
-
- �ر�ע������ �������֮ǰ�Ĳֿ�ɾ������git����̨��Ҫʹ��  git remote set-url
-origin �������������Ĳֿ�ĵ�ַ��������Ȼ��ִ�� git push add -u origin master
-
-
- ����
-1  ��d���½� �Ҽ��򿪿���̨
-2   git clone �����ص�ַ
-
-
-   �����ϴ��ҵ��˺ţ������ύû�м�¼�����ҵ�����û���ļ���Ϊ�˳��ּ�¼ʹ��
-git pull������ �����м�¼�����������ļ�
+ （四）下载
+       1.在d盘新建 右键打开控制台
+       2.git clone 加下载地址
+         别人上传我的账号，本地提交没有记录，并且电脑上没有文件，为了出现记录使用  
+         git pull则现在本地有记录，电脑上有文件。
+二 .下周计划
+ （一）html教学视频继续看，并且每天至少一页代码。代码都要自己去敲.多去记忆，多去思考逻辑过程.
+                           
