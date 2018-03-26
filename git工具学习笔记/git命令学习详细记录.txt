@@ -1,22 +1,24 @@
-һ.git��������˵��
-1��git status �鿴��ǰ״̬�������ύ�����Ҫ���ύ����ʹ�á�
-2��git diff �鿴�ύ�������ݣ�ʹ�ûس���������¼��
-3��git init ��ʼ��git������ʼʹ�õ�ʱ����Ҫʹ��������ֻ��ʹ��һ�Σ�������Ŀ¼�С�.git�����Ŀ¼��ʱ�򣬾Ͳ���Ҫ��ʹ��git ini�����ʼ����ע�⣺��ʼ��һ�飬��Ҫ�ڳ�ʼ���ڶ��顣
-4  git status �鿴��ǰ״̬ ��Ϊ��ɫ
-5  git add .  �����ı�
-6  git status ���ӳɹ�����ʾ��ɫ
-7  git commit -m "ע��"
-8  git log ��鱾���Ƿ��ύ�ɹ�    
-��.�ϴ��ļ���
-1  ����վgithub
-2  ���� ��ǰ��ַ�� git����̨ �س�
-3  git push add -u origin master
-4  ����ļ��⣬�鿴�Ƿ��ύ�ϴ��ɹ�
-<�ر�ע������>
-�����֮ǰ�Ĳֿ�ɾ������git����̨��Ҫʹ��  git remote set-url
-origin �������������Ĳֿ�ĵ�ַ��������Ȼ��ִ�� git push add -u origin master
-��.����
-1  ��d���½� �Ҽ��򿪿���̨
-2  git clone �����ص�ַ
-   �����ϴ��ҵ��˺ţ������ύû�м�¼�����ҵ�����û���ļ���Ϊ�˳��ּ�¼ʹ��
-   git pull������ �����м�¼�����������ļ�
+一、git基本命令说明
+1、git status 查看当前状态，不是提交命令，不要当提交命令使用。
+2、git diff 查看提交具体内容，使用回车件翻看记录。
+3、git init 初始化git，当开始使用的时候需要使用他，但只能使用一次，如果你的目录有“.git”这个目录的时候，就不需要在使用git ini命令初始化。注意：初始化一遍，不要在初始化第二遍。
+4、git status 查看当前状态 ，为红色
+5、git add .  添加文本
+6、git status 添加成功则显示绿色
+7、git commit -m "注释"
+8、git log 检查本地是否提交成功
+
+二、上传文件库
+1、打开网站github
+2、复制 当前地址至 git命令台 回车
+3、git push add -u origin master
+4、点击文件库，查看是否提交上传成功
+<特别注意事项>
+如果把之前的仓库删除，在git命令台需要使用  git remote set-url
+origin 加上你所建立的仓库的地址......，然后执行 git push add -u origin master
+
+三、下载
+1、在d盘新建 右键打开控制台
+2、git clone 加下载地址
+3、别人上传我的账号，本地提交没有记录，并且电脑上没有文件，为了出现记录使用
+   git pull则现在 本地有记录，电脑上有文件
