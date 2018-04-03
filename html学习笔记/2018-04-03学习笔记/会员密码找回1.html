@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <form name="frm" method="post" action="lost.php">
+<table width="400" align="center" border="0" cellpadding="10" cellspacing="10">
+<tr>
+	<td colspan="2" align="left"><h2><font face="simhei">会员密码找回</font></h2></td>
+</tr>
+<tr>
+<td align="right"><font face="simhei">找回类型：</font></td> 
+<td>
+		<input type="radio" name="lost" value="email" /><font face="simhei">邮箱找回</font>
+		&nbsp; <input type="radio" name="lost" value="phone" /><font face="simhei">手机找回</font>
+	</td>
+</tr>
+<tr>
+<td align="right">
+<font face="simhei" >电子邮箱：</font></td>
+<td><input type="text" name="email" id="email" /></td>
+
+</tr>
+<tr>
+	<td align="right"><font face="simhei">验证码：</font></td>
+<td><input type="text" name="checkcode" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td><input type="image" src="send.jpg" name="dosubmit" /></td>
+</tr>
+
+  </table>
+  </form>
+
+ </body>
+</html>
