@@ -27,7 +27,6 @@
         6.git status 添加成功则显示绿色
         7.git commit -m "注释"
         8.git log 检查本地是否提交成功    
-           
  （三）上传文件库
         1.打开网站github
         2.复制 当前地址至 git命令台 回车
