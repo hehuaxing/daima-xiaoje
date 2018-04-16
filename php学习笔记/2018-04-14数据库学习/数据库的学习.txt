@@ -1,0 +1,88 @@
+数据库基本概念
+1、数据库服务器
+	安装了数据库软件的电脑，就是“数据库服务器”。
+	安装了Apache软件的电脑，就是“WWW服务器”。
+	数据库服务器，提供对数据的管理、更新、安全、事务等方面功能。
+	举例：数据库服务器，可以看成是一个“文件柜”。
+2、DBMS
+	DBMS(Database Management System)数据库管理系统，是一个管理数据的大型软件。
+	常用DBMS软件有哪些？
+Access：是微软的小型数据库。
+SQL Server：是微软的大中型数据库。
+Oracle：是美国甲骨文公司的产品。大型、或超大型数据库。
+MySQL：原始瑞典的AB公司产品。后来被甲骨文公司收购。大家认为：MySQL只适用中小型网站数据库。是免费的产品。
+3、数据库
+	数据库：存储数据的仓库。
+	举例：数据库，可以看成是一个“文件柜”中的“小格子”。还可以看成是不同的“文件夹”。
+4、数据表
+	数据表是存储数据的真正的地方。
+	举例：数据表，可以看成是一个具体的“文件”。其实，就是一张“学生成绩表”。
+5、记录、字段、数据
+MySQL登录和退出——在CMD模式操作
+1、登录到MySQL服务器
+语法格式：mysql.exe –h主机名 –u用户名 –p密码
+参数说明：
+mysql.exe是mysql服务器的主应用程序。
+-h代表MySQL数据库主机名(MySQL数据库端口号3306)。如：localhost或127.0.0.1
+-u代表MySQL用户名。如：root
+-p代表MySQL密码。如：root
+注意：各个参数之间用空格隔开。
+举例：mysql –hlocalhost –uroot -proot
+2、退出MySQL客户端
+	
+MySQL数据库操作
+1、显示数据库
+语法：SHOW DATABASES;
+2、创建数据库
+语法格式：CREATE DATABASE [IF NOT EXISTS] db_name [CHARSET utf8]
+参数说明
+create database是系统命令。
+IF NOT EXISTS 是可选项。是一个条件判断。如果不存在，则创建数据库。
+db_name：是自定义的数据库名称。
+数据库名称的命名规则，与PHP变量一样。
+包括 a-z、0-9 、_这些符号。
+不区分大小写。
+CHARSET是设置数据库的默认字符集。默认字符集为lain1。
+注意：如果设置为UTF8，不能带中划线。PHP中要求必须带中划线。
+举例：
+create database 007online;  //默认字符集是latin1
+create database if not exists 007online;  //如果数据库不存在，再进行创建
+create database 007online charset utf8;  //指定数据库的默认字符集为utf8
+3、删除数据库
+语法：DROP DATABASE [IF EXISTS] db_name;
+MySQL数据库字符集
+1、查看数据库的字符集
+含义：显示创建数据库的SQL语句
+语法：SHOW CREATE DATABASE db_name;
+举例：show create database 007online;
+2、通过MySQL命令来修改数据库的字符集
+语法：ALTER DATABASE db_name DEFAULT CHARACTER SET utf8
+举例：alter database 007online default character set utf8
+MySQL数据表操作
+1、选择数据库
+描述：选择当前要操作的数据库，当前数据库只能是一个。
+语法：USE db_name;
+举例：use 007online;
+2、显示所有的数据表(文件)
+描述：显示当前数据库下的，所有数据表。
+语法：SHOW TABLES;
+3、创建数据表的结构
+语法：CREATE TABLE table_name(col_name col_type col_attr, col_name col_type col_attr,……)
+参数：
+col_name：列的名称。
+col_type：列的类型。如：tinyint、int、bigint、char、varchar、text、date、time等。
+col_attr：列的属性。
+NOT NULL | NULL：该列是否可以为空。
+DEFAULT default_value：指该列的默认值。
+default_value默认值可以是字符串，也可以是整型。
+AUTO_INCREMENT：该列为自动增长型，或者自动编号。要求该列必须是整型。一个表只能有一个auto_increment属性。
+PRIMARY KEY：主键。指定该列的值具有唯一性，主键所在的列不能为空。一个表的主键只能有一个。
+id字段的属性必须有：NOT NULL AUTO_INCREMENT PRIMARY KEY
+一个数据表，由多个列构成。多个列定义之间用英文下的逗号隔开
+4、删除数据表
+语法：DROP TABLE [IF EXISTS] table_name;
+举例：drop table news;
+5、修改数据表
+	使用数据表，使用的命令 alter table 。但是这个命令非常复杂，建议看懂就行。
+	还可以使用phpMyAdmin来进行表结构的修改。
+    describe显示表的结构定义

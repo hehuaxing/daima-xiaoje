@@ -1,0 +1,82 @@
+MySQL数据类型
+1、整型浮点型
+	（1）整型
+		tinyint   	最小型整数  0-255(-128 ~ +127)   1个字节
+		smallint  	小型整数    0-65535            2个字节
+		mediumint	中型整数    0-1677万           3个字节
+		int          一般整数    0-21亿             4个字节
+		bigint       最大整数    0-42亿              8个字节
+	（2）浮点型
+		float(M,D)	单精度(精确到小数点后7位)    M代表长度，D代表小数位数
+			举例：float(6,2) //总长度为6位，小数位数为2位，小数点不算。存的最大值为9999.99
+		double(M,D) 双精度(精确到小数点后15位)   M代表长度，D代表小数位数。
+2、日期时间型
+	date   日期型   格式为： “YYYY-mm-dd”
+	time   时间型   格式为： “00:00:00”
+3、字符和文本型
+	（1）字符型
+		char(M)	  	0-255	 固定长度的字符串   如：邮编、手机号码、电话号码等
+		varchar(M) 	0-65535  可变长度的字符串   如：新闻标题、家庭地址、毕业院校等。
+	（2）文本型
+		tinytext     0-255      小型文本
+		Text        0-1670万  中型文本
+		longtext    0-42亿     大型文本
+问题：当向数据表中添加一条记录，且记录的内容含有中文时，为何添加不进去？
+SQL基础
+1、SQL简介
+	SQL(Structured Query Language)结构化查询语言。
+	SQL就是操作数据的一种语言。
+2、增加记录
+语法格式：INSERT INTO table_name(字段1,字段2,字段3,…) VALUES(值1,值2,值3,…)
+语法说明
+INSERT INTO是添加数据的SQL命令。
+table_name要添加的数据表。
+表的字段列表，要与值的列表，一一对应。
+字段的类型，要与值类型一样。
+如果还有没有列出的字段，将用默认值代替。
+举例：insert into news(title,content,hits) values(‘标题’ , ‘内容’ , 100)
+3、删除记录
+语法：DELETE FROM table_name [WHERE 条件]
+说明：
+WHERE条件：如果省略，将删除所有记录。
+举例：
+delete from news;    //删除所有的记录
+delete from news where id>10;  //删除id>10所有记录
+delete from news where id>=10 and id<20;   //删除id>10且id<20的记录
+delete from news where author = ‘admin’ and id<100; //删除id<100且author = ‘admin’记录
+4、修改记录
+语法：UPDATE table_name SET 字段1 = 新值1，字段2=新值2,… [WHERE条件]
+说明：
+需要更新的字段列出，不需要更新的不用管它。
+字段的顺序可以修改。
+WHERE条件不能省略，如果省略，所有记录都会修改完一样。
+举例：
+update news set title = ‘新标题’,content = ‘新内容’ where id=50;
+update news set content = ‘新内容’ , title = ‘新标题’ where id=50;
+5、查询记录
+语法：SELECT 字段列表|* FROM table_name [WHERE条件] [ORDER BY排序][LIMIT限制输出]
+参数：
+字段字列表：查询某些字段的数据，各字段之间用逗号隔开，字段之间没有顺序。
+*：表示显示所有列的数据。如：select * from news;
+where：指查询的条件。
+SELECT * FROM news WHERE id<100;
+SELECT * FROM news WHERE id<100 and hits<100;
+SELECT * FROM news WHERE id=100 OR hits<50;
+ORDER BY：字段排序。
+语法：ORDER BY 字段 [ASC|DESC]
+ASC表示“升序”排列(默认)，DESC表示降序排列。
+SELECT * FROM news ORDER BY id DESC; //id降序排列
+SELECT * FROM news ORDER BY hits;  //hits升序排列
+LIMIT：限制输出
+语法：LIMIT startrow,pagesize;
+参数：
+startrow从指定的行数起，开始返回数据。
+pagesize返回的记录数。
+举例：
+LIMIT 0,10;  //从第0行起，返回10条记录
+LIMIT 10,10;  //从第10行起，返回10条记录
+LIMIT 20,10;  //从第20行起，返回10条记录
+导入SQL文件，用于测试使用
+Saixinjituan.sql
+注意：导入SQL文件时，要先创建数据库，然后再导入数据。
+      创建的数据库的字符集必须是UTF8，否则会乱码。
