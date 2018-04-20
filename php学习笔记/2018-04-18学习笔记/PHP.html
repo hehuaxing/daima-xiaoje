@@ -1,0 +1,37 @@
+<?php 
+//声明网页字符集
+header （"conter-type：text/html;" charset=utf-8");
+//**************连接mysql服务器********
+//（0）数据库配置信息
+$db_host ="localhost:3306";
+$db_user ="root";
+$db_pwd ="root";
+$db_name ="007online";
+
+$link=@mysql_connect($db_host,$db_user,$db_pwd);
+if(!$link)
+{  
+//如果php连接mysql成功
+echo"<font size=7 color =red>连接失败
+exit();//中止脚本继续向下运行
+
+
+
+}
+//(2)选择当前要操作的数据库名称
+if（！mysql_select_db_name))
+//如果选择数据库失败
+echo "<font size=7 color =red>选择数据库{$db_name}出错</font>";
+exit();
+}
+//设置mysql请求或返回数据的字符集
+mysql_query("set names utf8");
+//********定义函数****
+function dump ($arr）
+{echo "<pre>";
+print_r($arr);
+echo "</pre>";
+}
+
+
+?>

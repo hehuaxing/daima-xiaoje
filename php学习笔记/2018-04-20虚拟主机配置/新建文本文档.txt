@@ -1,0 +1,17 @@
+虚拟主机的配置过骤
+1、配置本地的DNS文件——hosts
+文件路径：C:\Windows\System32\drivers\etc\hosts
+
+2、配置Apache的主配置文件——httpd.conf
+Apache主配置文件路径：C:\Program Files (x86)\phpStudy\Apache2\conf\httpd.conf
+监听自己网卡的哪个IP地址的，哪个端口的访问
+
+以下指定哪些IP地址和端口，可以访问虚拟主机。其中，IP地址必须是自己的网卡的IP地址。
+
+3、配置Apache的虚拟主机——vhosts.conf
+文件路径：C:\Program Files (x86)\phpStudy\Apache2\conf\vhosts.conf
+
+
+配置完虚拟主机后，为什么localhost访问路径被更改了？
+因为配置完虚拟主机后，第一个虚拟主机的优先级最高，比全局中的配置还要高。因此，访问localhost时，就指向了第一个虚拟主机。
+
